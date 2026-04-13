@@ -1,0 +1,119 @@
+Instructions: Deploy a Vite + React project to GitHub Pages
+Implement the following changes to set up automatic GitHub Pages deployment via GitHub Actions. The project uses pnpm.
+
+Step 1 — Update vite.config.ts
+Add GITHUB_PAGES_BASE as the primary base path variable. Find the line that sets base: inside defineConfig and update it so the config reads:
+
+const basePath = process.env.GITHUB_PAGES_BASE || process.env.BASE_PATH || "/";
+
+Then pass it to the config:
+
+export default defineConfig({
+  base: basePath,
+  // ... rest of existing config unchanged
+});
+
+If PORT currently throws when missing, make it default to a safe value instead of throwing:
+
+const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+
+Step 2 — Update src/main.tsx (or wherever BrowserRouter is mounted)
+If the app uses React Router's BrowserRouter, ensure it has basename set so client-side routing works under the GitHub Pages subpath:
+
+<BrowserRouter basename={import.meta.env.BASE_URL}>
+
+Vite automatically sets BASE_URL from the base config value, so this requires no other changes.
+
+Step 3 — Add public/404.html
+Create a file at public/404.html (inside the Vite project's public/ directory — not at the repo root). This fixes direct-link and page-refresh 404s on GitHub Pages for single-page apps:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loading...</title>
+    <script>
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
+
+Step 4 — Update index.html
+Add this script block inside <head>, before any other scripts or stylesheet links. It decodes the redirect from 404.html and restores the correct URL before React loads:
+
+<script>
+  (function () {
+    var l = window.location;
+    if (l.search[1] === '/') {
+      var decoded = l.search.slice(1).split('&').map(function (s) {
+        return s.replace(/~and~/g, '&');
+      });
+      history.replaceState(
+        null, null,
+        l.pathname.slice(0, -1) + decoded[0] +
+        (decoded.slice(1).length ? '?' + decoded.slice(1).join('&') : '') +
+        l.hash
+      );
+    }
+  })();
+</script>
+
+Step 5 — Create .github/workflows/deploy.yml
+Create this file at exactly that path in the repo root. Adjust path: in the upload step to point to wherever Vite outputs its build (commonly dist or dist/public):
+
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm run build
+        env:
+          GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
+          PORT: 3000
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+Notes for the agent:
+
+If the project is a pnpm monorepo with multiple packages, replace pnpm run build with pnpm --filter @workspace/<package-name> run build and update path: to the package's dist output folder (e.g. packages/my-app/dist).
+The path: in upload-pages-artifact must point to the folder containing index.html — check vite.config.ts's build.outDir setting to confirm the exact path.
+Check pnpm --version in the project. If it's version 10, change pnpm/action-setup@v3 → pnpm/action-setup@v4 and version: 9 → version: 10.
+Step 6 — Enable GitHub Pages in the repo (manual, done by the user)
+In the GitHub repository: Settings → Pages → Source → GitHub Actions
+
+After that, every push to main will automatically build and deploy the app to https://<username>.github.io/<repo-name>/.
