@@ -4,7 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+const rawPort = process.env.PORT ? Number(process.env.PORT) : 3000;
+const port = Number.isNaN(rawPort) || rawPort <= 0 ? 3000 : rawPort;
 
 const basePath =
   process.env.GITHUB_PAGES_BASE || process.env.BASE_PATH || "/";
