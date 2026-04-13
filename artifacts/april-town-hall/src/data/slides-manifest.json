@@ -1,0 +1,74 @@
+[
+  {
+    "id": "a1b2c3d4-0001-0000-0000-000000000001",
+    "position": 1,
+    "filepath": "src/pages/slides/Slide01ContextPurpose.tsx",
+    "title": "Context & Purpose",
+    "description": "April Town Hall opening slide covering how TBDC operates and executes.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0002-0000-0000-000000000002",
+    "position": 2,
+    "filepath": "src/pages/slides/Slide02Workversaries.tsx",
+    "title": "Workversaries",
+    "description": "Celebrating March & April team member anniversaries.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0003-0000-0000-000000000003",
+    "position": 3,
+    "filepath": "src/pages/slides/Slide03BudgetingProcess.tsx",
+    "title": "Budgeting Process",
+    "description": "Budgeting best practices led by Olayinka: why it matters, the process, and timelines.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0004-0000-0000-000000000004",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04OperatingPrinciples.tsx",
+    "title": "Operating Principles",
+    "description": "Ownership and Done — the standard for all work with clear owner, timeline, and success definition.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0005-0000-0000-000000000005",
+    "position": 5,
+    "filepath": "src/pages/slides/Slide05SpaceAudit.tsx",
+    "title": "Space Audit",
+    "description": "Facilities update: space audit and optimization including tenant transitions and new additions.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0006-0000-0000-000000000006",
+    "position": 6,
+    "filepath": "src/pages/slides/Slide06SprintRetro.tsx",
+    "title": "Sprint Week Retro",
+    "description": "March Sprint Week retrospective with focused action plan and accountability improvements.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0007-0000-0000-000000000007",
+    "position": 7,
+    "filepath": "src/pages/slides/Slide07ScoutReports.tsx",
+    "title": "Scout Reports",
+    "description": "Scout Report process updates: defined windows, clear ownership, and streamlined flow.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0008-0000-0000-000000000008",
+    "position": 8,
+    "filepath": "src/pages/slides/Slide08LunchAndLearn.tsx",
+    "title": "Lunch & Learn",
+    "description": "Community Lunch & Learn Series with open call for participation.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0009-0000-0000-000000000009",
+    "position": 9,
+    "filepath": "src/pages/slides/Slide09ClosingQA.tsx",
+    "title": "Closing Q&A",
+    "description": "Closing slide: Clarity. Ownership. Execution. Q&A open floor.",
+    "speakerNotes": ""
+  }
+]

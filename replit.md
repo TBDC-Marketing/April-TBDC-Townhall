@@ -25,3 +25,22 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+### April Town Hall (`artifacts/april-town-hall`)
+- **Kind**: Slides (React + Vite + Tailwind CSS)
+- **Preview path**: `/` (root)
+- **Stack**: React, Vite, lucide-react, Google Fonts (Plus Jakarta Sans, Instrument Serif, Inter, JetBrains Mono)
+- **Slides**: 9 slides covering April Town Hall content for TBDC
+  1. Context & Purpose (navy)
+  2. Workversaries (warm white)
+  3. Budgeting Process (navy)
+  4. Operating Principles (sand)
+  5. Space Audit (navy)
+  6. Sprint Week Retro (warm white)
+  7. Scout Reports (sand)
+  8. Lunch & Learn (navy)
+  9. Closing Q&A (warm white)
+- **Navigation**: Arrow keys, click, touch swipe — managed by slides artifact routing system
+- **Manifest**: `src/data/slides-manifest.json`
