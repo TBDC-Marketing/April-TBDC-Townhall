@@ -12,61 +12,85 @@
     "position": 2,
     "filepath": "src/pages/slides/Slide02Workversaries.tsx",
     "title": "Workversaries",
-    "description": "Celebrating March & April team member anniversaries.",
+    "description": "Celebrating March & April team member anniversaries with names, years, and avatars.",
     "speakerNotes": ""
   },
   {
     "id": "a1b2c3d4-0003-0000-0000-000000000003",
     "position": 3,
-    "filepath": "src/pages/slides/Slide03BudgetingProcess.tsx",
-    "title": "Budgeting Process",
-    "description": "Budgeting best practices led by Olayinka: why it matters, the process, and timelines.",
-    "speakerNotes": ""
-  },
-  {
-    "id": "a1b2c3d4-0004-0000-0000-000000000004",
-    "position": 4,
-    "filepath": "src/pages/slides/Slide04OperatingPrinciples.tsx",
+    "filepath": "src/pages/slides/Slide03OperatingPrinciples.tsx",
     "title": "Operating Principles",
     "description": "Ownership and Done — the standard for all work with clear owner, timeline, and success definition.",
     "speakerNotes": ""
   },
   {
+    "id": "a1b2c3d4-0004-0000-0000-000000000004",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04HowWeShowUp.tsx",
+    "title": "How We Show Up as a Team",
+    "description": "Expectations for how every team member thinks, acts, and contributes beyond their immediate tasks.",
+    "speakerNotes": ""
+  },
+  {
     "id": "a1b2c3d4-0005-0000-0000-000000000005",
     "position": 5,
-    "filepath": "src/pages/slides/Slide05SpaceAudit.tsx",
-    "title": "Space Audit",
-    "description": "Facilities update: space audit and optimization including tenant transitions and new additions.",
+    "filepath": "src/pages/slides/Slide05WhatsComingRaisingTheBar.tsx",
+    "title": "Raising the Bar",
+    "description": "Major initiatives underway and what higher expectations mean for cross-team execution.",
     "speakerNotes": ""
   },
   {
     "id": "a1b2c3d4-0006-0000-0000-000000000006",
     "position": 6,
-    "filepath": "src/pages/slides/Slide06SprintRetro.tsx",
-    "title": "Sprint Week Retro",
-    "description": "March Sprint Week retrospective with focused action plan and accountability improvements.",
+    "filepath": "src/pages/slides/Slide06OpenOfficeHours.tsx",
+    "title": "Open Office Hours with Ange",
+    "description": "Wednesday open office hours with Angela — share ideas, raise blockers, get input.",
     "speakerNotes": ""
   },
   {
     "id": "a1b2c3d4-0007-0000-0000-000000000007",
     "position": 7,
-    "filepath": "src/pages/slides/Slide07ScoutReports.tsx",
-    "title": "Scout Reports",
-    "description": "Scout Report process updates: defined windows, clear ownership, and streamlined flow.",
+    "filepath": "src/pages/slides/Slide07SpaceAudit.tsx",
+    "title": "Space Audit",
+    "description": "Facilities update: space audit and optimization including tenant transitions and new additions.",
     "speakerNotes": ""
   },
   {
     "id": "a1b2c3d4-0008-0000-0000-000000000008",
     "position": 8,
-    "filepath": "src/pages/slides/Slide08LunchAndLearn.tsx",
-    "title": "Lunch & Learn",
-    "description": "Community Lunch & Learn Series with open call for participation.",
+    "filepath": "src/pages/slides/Slide08SprintRetro.tsx",
+    "title": "Sprint Week Retro",
+    "description": "March Sprint Week retrospective with focused action plan and accountability improvements.",
     "speakerNotes": ""
   },
   {
     "id": "a1b2c3d4-0009-0000-0000-000000000009",
     "position": 9,
-    "filepath": "src/pages/slides/Slide09ClosingQA.tsx",
+    "filepath": "src/pages/slides/Slide09ScoutReports.tsx",
+    "title": "Scout Reports",
+    "description": "Scout Report process updates: defined windows, clear ownership, and streamlined flow.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0010-0000-0000-000000000010",
+    "position": 10,
+    "filepath": "src/pages/slides/Slide10NextFocus.tsx",
+    "title": "Next 60–90 Day Focus",
+    "description": "Four priority focus areas for the next 60 to 90 days across Sprint Week, pipeline, mentors, and storytelling.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0011-0000-0000-000000000011",
+    "position": 11,
+    "filepath": "src/pages/slides/Slide11LunchAndLearn.tsx",
+    "title": "Lunch & Learn",
+    "description": "Community Lunch & Learn Series with open call for participation.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a1b2c3d4-0012-0000-0000-000000000012",
+    "position": 12,
+    "filepath": "src/pages/slides/Slide12ClosingQA.tsx",
     "title": "Closing Q&A",
     "description": "Closing slide: Clarity. Ownership. Execution. Q&A open floor.",
     "speakerNotes": ""

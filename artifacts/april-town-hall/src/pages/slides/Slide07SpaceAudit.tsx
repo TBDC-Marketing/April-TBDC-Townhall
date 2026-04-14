@@ -76,7 +76,7 @@ function DarkCard({
   );
 }
 
-export default function Slide05SpaceAudit() {
+export default function Slide07SpaceAudit() {
   return (
     <div
       style={{

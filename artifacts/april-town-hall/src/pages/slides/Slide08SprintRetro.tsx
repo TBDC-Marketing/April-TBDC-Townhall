@@ -1,3 +1,6 @@
+import { Clock, Target, CheckCircle2 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
 const COLORS = {
   navy: "#0A1628",
   teal: "#00A88E",
@@ -13,7 +16,68 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide04OperatingPrinciples() {
+function LightCard({
+  icon: Icon,
+  title,
+  description,
+}: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div
+      style={{
+        background: "#fff",
+        borderRadius: 16,
+        padding: "28px 24px",
+        border: "1px solid rgba(203,213,225,0.5)",
+        borderLeft: `3px solid ${COLORS.teal}`,
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          width: 44,
+          height: 44,
+          borderRadius: 12,
+          background: "rgba(0,168,142,0.1)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: 16,
+        }}
+      >
+        <Icon size={22} color={COLORS.teal} />
+      </div>
+      <h3
+        style={{
+          fontFamily: FONTS.heading,
+          fontWeight: 700,
+          fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
+          color: COLORS.charcoal,
+          margin: "0 0 8px 0",
+        }}
+      >
+        {title}
+      </h3>
+      <p
+        style={{
+          fontFamily: FONTS.body,
+          fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
+          lineHeight: 1.6,
+          color: "rgba(30,41,59,0.7)",
+          margin: 0,
+        }}
+      >
+        {description}
+      </p>
+    </div>
+  );
+}
+
+export default function Slide08SprintRetro() {
   return (
     <div
       style={{
@@ -24,7 +88,7 @@ export default function Slide04OperatingPrinciples() {
         justifyContent: "center",
         overflow: "hidden",
         position: "relative",
-        background: COLORS.sand,
+        background: COLORS.warmWhite,
       }}
     >
       <div
@@ -58,7 +122,7 @@ export default function Slide04OperatingPrinciples() {
                 margin: "0 0 20px 0",
               }}
             >
-              Operating Principles
+              March Retro
             </p>
             <h1
               style={{
@@ -71,7 +135,7 @@ export default function Slide04OperatingPrinciples() {
                 margin: "0 0 16px 0",
               }}
             >
-              Ownership &amp;{" "}
+              Sprint Week{" "}
               <span
                 style={{
                   fontFamily: FONTS.serif,
@@ -79,7 +143,7 @@ export default function Slide04OperatingPrinciples() {
                   color: COLORS.teal,
                 }}
               >
-                Done
+                Improvements
               </span>
             </h1>
             <ul
@@ -111,7 +175,7 @@ export default function Slide04OperatingPrinciples() {
                     color: "rgba(30,41,59,0.8)",
                   }}
                 >
-                  Everything must have one clear owner. No shared accountability.
+                  We ran a full ops review of the March Sprint Week.
                 </span>
               </li>
               <li style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -133,8 +197,8 @@ export default function Slide04OperatingPrinciples() {
                     color: "rgba(30,41,59,0.8)",
                   }}
                 >
-                  A specific timeline date must be set (not 'soon' or 'in
-                  progress').
+                  Identified key friction areas: App reliability, founder
+                  communication, and internal coordination.
                 </span>
               </li>
               <li style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -156,93 +220,46 @@ export default function Slide04OperatingPrinciples() {
                     color: "rgba(30,41,59,0.8)",
                   }}
                 >
-                  A clear, observable definition of what success looks like.
+                  We are prioritizing 3 to 5 targeted improvements for May.
                 </span>
               </li>
             </ul>
-            <p
+            <div
               style={{
-                fontFamily: FONTS.body,
-                fontSize: 14,
-                color: "rgba(30,41,59,0.7)",
-                marginTop: 24,
+                marginTop: 32,
+                background: "rgba(0,168,142,0.1)",
+                borderRadius: 12,
+                padding: "16px 20px",
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
               }}
             >
-              If these 3 things are not defined, the work is not ready to move
-              forward.
-            </p>
+              <Clock size={20} color={COLORS.teal} />
+              <span
+                style={{
+                  fontFamily: FONTS.body,
+                  fontSize: 14,
+                  color: COLORS.charcoal,
+                  fontWeight: 500,
+                }}
+              >
+                Next Sprint Week: Last week of May.
+              </span>
+            </div>
           </div>
           {/* Right column */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <div
-              style={{
-                background: "#fff",
-                borderRadius: 16,
-                padding: "28px 24px",
-                border: "1px solid rgba(203,213,225,0.5)",
-                borderLeft: `3px solid ${COLORS.teal}`,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: FONTS.heading,
-                  fontWeight: 700,
-                  fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
-                  color: COLORS.charcoal,
-                  margin: "0 0 8px 0",
-                }}
-              >
-                Not Good
-              </h3>
-              <p
-                style={{
-                  fontFamily: FONTS.body,
-                  fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
-                  lineHeight: 1.6,
-                  color: "rgba(30,41,59,0.7)",
-                  margin: 0,
-                }}
-              >
-                "Website updates in progress" (Vague, shared, no deadline)
-              </p>
-            </div>
-            <div
-              style={{
-                background: "#fff",
-                borderRadius: 16,
-                padding: "28px 24px",
-                border: "1px solid rgba(203,213,225,0.5)",
-                borderLeft: `3px solid ${COLORS.teal}`,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: FONTS.heading,
-                  fontWeight: 700,
-                  fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
-                  color: COLORS.charcoal,
-                  margin: "0 0 8px 0",
-                }}
-              >
-                The Standard
-              </h3>
-              <p
-                style={{
-                  fontFamily: FONTS.body,
-                  fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
-                  lineHeight: 1.6,
-                  color: "rgba(30,41,59,0.7)",
-                  margin: 0,
-                }}
-              >
-                Owner: Dan | Timeline: April 30 | Done: New homepage live with
-                updated copy, approved by Dharti.
-              </p>
-            </div>
+          <div style={{ display: "grid", gap: 16 }}>
+            <LightCard
+              icon={Target}
+              title="Focused Action Plan"
+              description="App and scheduling improvements, founder communication clarity and sequencing, and tight internal execution planning."
+            />
+            <LightCard
+              icon={CheckCircle2}
+              title="Accountability"
+              description="Every single improvement has a clear owner, a timeline, and a success condition."
+            />
           </div>
         </div>
       </div>

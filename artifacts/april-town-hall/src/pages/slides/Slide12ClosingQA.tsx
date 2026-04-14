@@ -13,7 +13,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide09ClosingQA() {
+export default function Slide12ClosingQA() {
   return (
     <div
       style={{

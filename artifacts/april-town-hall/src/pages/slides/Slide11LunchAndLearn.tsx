@@ -15,7 +15,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide08LunchAndLearn() {
+export default function Slide11LunchAndLearn() {
   return (
     <div
       style={{

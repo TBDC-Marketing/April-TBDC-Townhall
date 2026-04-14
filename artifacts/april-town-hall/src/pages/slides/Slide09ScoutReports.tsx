@@ -16,7 +16,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide07ScoutReports() {
+export default function Slide09ScoutReports() {
   return (
     <div
       style={{
