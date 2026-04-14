@@ -43,8 +43,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
         flex: 1,
       }}
     >
-      {/* Avatar */}
-      {/* TODO: Replace initials avatar with <img> once headshots are provided */}
+      {/* Avatar — circular photo; falls back to initials if imageSrc is not provided */}
       <div
         style={{
           width: 96,
