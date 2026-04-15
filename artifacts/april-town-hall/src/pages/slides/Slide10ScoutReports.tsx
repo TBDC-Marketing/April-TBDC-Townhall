@@ -133,7 +133,7 @@ export default function Slide10ScoutReports() {
                 style={{
                   fontFamily: FONTS.heading,
                   fontWeight: 700,
-                  fontSize: 22,
+                  fontSize: "clamp(1.1rem, 1.8vw, 2.5rem)",
                   color: "#fff",
                 }}
               >
@@ -142,7 +142,7 @@ export default function Slide10ScoutReports() {
               <div
                 style={{
                   fontFamily: FONTS.body,
-                  fontSize: 17,
+                  fontSize: "clamp(0.9rem, 1.3vw, 1.8rem)",
                   color: "rgba(255,255,255,0.55)",
                   marginTop: 6,
                 }}

@@ -47,8 +47,8 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
       {/* Avatar — circular photo; falls back to initials if imageSrc is not provided */}
       <div
         style={{
-          width: 100,
-          height: 100,
+          width: "clamp(80px, 8vw, 140px)",
+          height: "clamp(80px, 8vw, 140px)",
           borderRadius: "50%",
           overflow: "hidden",
           border: `3px solid ${COLORS.teal}`,
@@ -70,7 +70,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
             style={{
               fontFamily: FONTS.heading,
               fontWeight: 800,
-              fontSize: 30,
+              fontSize: "clamp(1.5rem, 2.5vw, 3rem)",
               color: "#fff",
               letterSpacing: "-0.02em",
             }}
@@ -86,7 +86,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: 72,
+            fontSize: "clamp(3.5rem, 5.5vw, 8rem)",
             lineHeight: 1,
             color: COLORS.teal,
             letterSpacing: "-0.04em",
@@ -97,7 +97,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
         <div
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 15,
+            fontSize: "clamp(0.7rem, 1.1vw, 1.3rem)",
             fontWeight: 700,
             color: "rgba(30,41,59,0.5)",
             textTransform: "uppercase",
@@ -114,7 +114,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: 20,
+          fontSize: "clamp(1rem, 1.6vw, 2rem)",
           color: COLORS.charcoal,
           textAlign: "center",
           lineHeight: 1.3,

@@ -9,6 +9,12 @@
   --color-charcoal: #1E293B;
 }
 
+html {
+  /* Scale 1rem with viewport above 1024px so all rem-based clamp limits grow
+     on larger screens, matching the vw proportions seen in the Replit preview. */
+  font-size: clamp(16px, 1.5625vw, 28px);
+}
+
 html,
 body,
 #root {
