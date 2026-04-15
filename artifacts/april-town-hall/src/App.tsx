@@ -409,20 +409,19 @@ export default function App() {
         aria-label="Previous slide"
         style={{
           position: "fixed",
-          bottom: 28,
-          left: "50%",
-          transform: "translateX(calc(-50% - 40px))",
+          bottom: 20,
+          right: 68,
           zIndex: 60,
-          background: "rgba(10,22,40,0.6)",
+          background: "rgba(10,22,40,0.3)",
           backdropFilter: "blur(8px)",
-          border: "1px solid rgba(255,255,255,0.1)",
+          border: "1px solid rgba(255,255,255,0.07)",
           borderRadius: 12,
           padding: "12px 16px",
           cursor: currentSlide === 0 ? "not-allowed" : "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          opacity: controlsVisible ? (currentSlide === 0 ? 0.3 : 1) : 0,
+          opacity: controlsVisible ? (currentSlide === 0 ? 0.25 : 0.6) : 0,
           transition: "all 0.3s",
           pointerEvents: controlsVisible ? "auto" : "none",
         }}
@@ -436,13 +435,12 @@ export default function App() {
         aria-label="Next slide"
         style={{
           position: "fixed",
-          bottom: 28,
-          left: "50%",
-          transform: "translateX(calc(-50% + 40px))",
+          bottom: 20,
+          right: 16,
           zIndex: 60,
-          background: "rgba(10,22,40,0.6)",
+          background: "rgba(10,22,40,0.3)",
           backdropFilter: "blur(8px)",
-          border: "1px solid rgba(255,255,255,0.1)",
+          border: "1px solid rgba(255,255,255,0.07)",
           borderRadius: 12,
           padding: "12px 16px",
           cursor:
@@ -453,8 +451,8 @@ export default function App() {
           opacity:
             controlsVisible
               ? currentSlide === totalSlides - 1
-                ? 0.3
-                : 1
+                ? 0.25
+                : 0.6
               : 0,
           transition: "all 0.3s",
           pointerEvents: controlsVisible ? "auto" : "none",
