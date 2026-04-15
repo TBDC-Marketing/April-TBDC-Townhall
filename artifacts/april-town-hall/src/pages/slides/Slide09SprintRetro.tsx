@@ -30,17 +30,15 @@ function LightCard({
       style={{
         background: "#fff",
         borderRadius: 16,
-        padding: "28px 24px",
+        padding: "32px 28px",
         border: "1px solid rgba(203,213,225,0.5)",
         borderLeft: `3px solid ${COLORS.teal}`,
-        position: "relative",
-        overflow: "hidden",
       }}
     >
       <div
         style={{
-          width: 44,
-          height: 44,
+          width: 56,
+          height: 56,
           borderRadius: 12,
           background: "rgba(0,168,142,0.1)",
           display: "flex",
@@ -49,15 +47,15 @@ function LightCard({
           marginBottom: 16,
         }}
       >
-        <Icon size={22} color={COLORS.teal} />
+        <Icon size={28} color={COLORS.teal} />
       </div>
       <h3
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
+          fontSize: "clamp(1.15rem, 1.6vw, 1.5rem)",
           color: COLORS.charcoal,
-          margin: "0 0 8px 0",
+          margin: "0 0 10px 0",
         }}
       >
         {title}
@@ -65,7 +63,7 @@ function LightCard({
       <p
         style={{
           fontFamily: FONTS.body,
-          fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
+          fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
           lineHeight: 1.6,
           color: "rgba(30,41,59,0.7)",
           margin: 0,
@@ -77,7 +75,7 @@ function LightCard({
   );
 }
 
-export default function Slide08SprintRetro() {
+export default function Slide09SprintRetro() {
   return (
     <div
       style={{
@@ -88,15 +86,15 @@ export default function Slide08SprintRetro() {
         justifyContent: "center",
         overflow: "hidden",
         position: "relative",
-        background: COLORS.warmWhite,
+        background: COLORS.sand,
       }}
     >
       <div
         style={{
-          maxWidth: 1100,
+          maxWidth: 1400,
           width: "100%",
           margin: "0 auto",
-          padding: "64px clamp(32px, 5vw, 80px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
         }}
@@ -109,12 +107,11 @@ export default function Slide08SprintRetro() {
             alignItems: "center",
           }}
         >
-          {/* Left column */}
           <div>
             <p
               style={{
                 fontFamily: FONTS.mono,
-                fontSize: 13,
+                fontSize: 16,
                 fontWeight: 700,
                 color: COLORS.teal,
                 textTransform: "uppercase",
@@ -128,7 +125,7 @@ export default function Slide08SprintRetro() {
               style={{
                 fontFamily: FONTS.heading,
                 fontWeight: 800,
-                fontSize: "clamp(2rem, 5vw, 3.75rem)",
+                fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
                 lineHeight: 1.1,
                 letterSpacing: "-0.02em",
                 color: COLORS.charcoal,
@@ -153,93 +150,54 @@ export default function Slide08SprintRetro() {
                 margin: "24px 0 0 0",
                 display: "flex",
                 flexDirection: "column",
-                gap: 16,
+                gap: 18,
               }}
             >
-              <li style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <span
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: "50%",
-                    background: COLORS.teal,
-                    marginTop: 8,
-                    flexShrink: 0,
-                  }}
-                />
-                <span
-                  style={{
-                    fontFamily: FONTS.body,
-                    fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
-                    lineHeight: 1.6,
-                    color: "rgba(30,41,59,0.8)",
-                  }}
-                >
-                  We ran a full ops review of the March Sprint Week.
-                </span>
-              </li>
-              <li style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <span
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: "50%",
-                    background: COLORS.teal,
-                    marginTop: 8,
-                    flexShrink: 0,
-                  }}
-                />
-                <span
-                  style={{
-                    fontFamily: FONTS.body,
-                    fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
-                    lineHeight: 1.6,
-                    color: "rgba(30,41,59,0.8)",
-                  }}
-                >
-                  Identified key friction areas: App reliability, founder
-                  communication, and internal coordination.
-                </span>
-              </li>
-              <li style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <span
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: "50%",
-                    background: COLORS.teal,
-                    marginTop: 8,
-                    flexShrink: 0,
-                  }}
-                />
-                <span
-                  style={{
-                    fontFamily: FONTS.body,
-                    fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
-                    lineHeight: 1.6,
-                    color: "rgba(30,41,59,0.8)",
-                  }}
-                >
-                  We are prioritizing 3 to 5 targeted improvements for May.
-                </span>
-              </li>
+              {[
+                "We ran a full ops review of the March Sprint Week.",
+                "Identified key friction areas: App reliability, founder communication, and internal coordination.",
+                "We are prioritizing 3 to 5 targeted improvements for May.",
+              ].map((text) => (
+                <li key={text} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
+                  <span
+                    style={{
+                      width: 10,
+                      height: 10,
+                      borderRadius: "50%",
+                      background: COLORS.teal,
+                      marginTop: 8,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <span
+                    style={{
+                      fontFamily: FONTS.body,
+                      fontSize: "clamp(1.1rem, 1.5vw, 1.4rem)",
+                      lineHeight: 1.6,
+                      color: "rgba(30,41,59,0.8)",
+                    }}
+                  >
+                    {text}
+                  </span>
+                </li>
+              ))}
             </ul>
             <div
               style={{
                 marginTop: 32,
                 background: "rgba(0,168,142,0.1)",
                 borderRadius: 12,
-                padding: "16px 20px",
+                padding: "18px 22px",
                 display: "flex",
                 alignItems: "center",
-                gap: 12,
+                gap: 14,
               }}
             >
-              <Clock size={20} color={COLORS.teal} />
+              <Clock size={24} color={COLORS.teal} />
               <span
                 style={{
                   fontFamily: FONTS.body,
-                  fontSize: 14,
+                  fontSize: "clamp(1rem, 1.3vw, 1.2rem)",
                   color: COLORS.charcoal,
                   fontWeight: 500,
                 }}
@@ -248,8 +206,7 @@ export default function Slide08SprintRetro() {
               </span>
             </div>
           </div>
-          {/* Right column */}
-          <div style={{ display: "grid", gap: 16 }}>
+          <div style={{ display: "grid", gap: 20 }}>
             <LightCard
               icon={Target}
               title="Focused Action Plan"

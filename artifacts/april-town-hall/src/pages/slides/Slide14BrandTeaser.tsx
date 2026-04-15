@@ -13,7 +13,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide01ContextPurpose() {
+export default function Slide14BrandTeaser() {
   return (
     <div
       style={{
@@ -27,28 +27,22 @@ export default function Slide01ContextPurpose() {
         background: COLORS.navy,
       }}
     >
+      {/* Radial glow */}
       <div
         style={{
           position: "absolute",
-          top: "40%",
-          left: "60%",
+          top: "50%",
+          left: "50%",
           transform: "translate(-50%, -50%)",
-          width: 600,
-          height: 600,
+          width: 900,
+          height: 900,
           borderRadius: "50%",
-          background: "rgba(0,168,142,0.03)",
-          filter: "blur(80px)",
+          background: "rgba(0,168,142,0.05)",
+          filter: "blur(120px)",
           pointerEvents: "none",
         }}
       />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.06,
-          background: `linear-gradient(180deg, transparent 40%, rgba(0,168,142,0.13) 100%)`,
-        }}
-      />
+
       <div
         style={{
           maxWidth: 1280,
@@ -68,11 +62,12 @@ export default function Slide01ContextPurpose() {
             color: COLORS.teal,
             textTransform: "uppercase",
             letterSpacing: "0.12em",
-            margin: "0 0 20px 0",
+            margin: "0 0 32px 0",
           }}
         >
-          April Town Hall
+          Coming Soon
         </p>
+
         <h1
           style={{
             fontFamily: FONTS.heading,
@@ -84,7 +79,7 @@ export default function Slide01ContextPurpose() {
             margin: "0 0 24px 0",
           }}
         >
-          How we{" "}
+          A New{" "}
           <span
             style={{
               fontFamily: FONTS.serif,
@@ -92,23 +87,46 @@ export default function Slide01ContextPurpose() {
               color: COLORS.teal,
             }}
           >
-            operate &amp; execute
+            TBDC Brand
           </span>
         </h1>
+
         <p
           style={{
             fontFamily: FONTS.body,
             fontSize: "clamp(1.2rem, 1.8vw, 1.6rem)",
             lineHeight: 1.7,
-            color: "rgba(255,255,255,0.7)",
-            maxWidth: 800,
-            margin: "0 auto",
+            color: "rgba(255,255,255,0.65)",
+            maxWidth: 760,
+            margin: "0 auto 64px",
           }}
         >
-          Sharing key updates across the organization, reinforcing how we work
-          as a team, and highlighting where we are improving systems and
-          processes.
+          We are refreshing how TBDC shows up in the world. A new identity that
+          reflects who we are and where we are headed.
         </p>
+
+        <div
+          style={{
+            display: "inline-block",
+            border: "1px solid rgba(0,168,142,0.4)",
+            borderRadius: 16,
+            padding: "48px 80px",
+            background: "rgba(0,168,142,0.04)",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: FONTS.serif,
+              fontStyle: "italic",
+              fontSize: "clamp(1.6rem, 3vw, 2.8rem)",
+              color: "rgba(255,255,255,0.35)",
+              margin: 0,
+              letterSpacing: "0.02em",
+            }}
+          >
+            Brand reveal coming soon
+          </p>
+        </div>
       </div>
     </div>
   );

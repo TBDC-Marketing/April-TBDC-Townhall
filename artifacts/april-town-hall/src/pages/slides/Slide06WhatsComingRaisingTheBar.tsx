@@ -30,34 +30,32 @@ function LightCard({
       style={{
         background: "#fff",
         borderRadius: 16,
-        padding: "24px 20px",
+        padding: "28px 24px",
         border: "1px solid rgba(203,213,225,0.5)",
         borderLeft: `3px solid ${COLORS.teal}`,
-        position: "relative",
-        overflow: "hidden",
       }}
     >
       <div
         style={{
-          width: 40,
-          height: 40,
-          borderRadius: 10,
+          width: 56,
+          height: 56,
+          borderRadius: 12,
           background: "rgba(0,168,142,0.1)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: 12,
+          marginBottom: 14,
         }}
       >
-        <Icon size={20} color={COLORS.teal} />
+        <Icon size={28} color={COLORS.teal} />
       </div>
       <h3
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)",
+          fontSize: "clamp(1.15rem, 1.6vw, 1.5rem)",
           color: COLORS.charcoal,
-          margin: "0 0 6px 0",
+          margin: "0 0 8px 0",
         }}
       >
         {title}
@@ -65,7 +63,7 @@ function LightCard({
       <p
         style={{
           fontFamily: FONTS.body,
-          fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
+          fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
           lineHeight: 1.6,
           color: "rgba(30,41,59,0.7)",
           margin: 0,
@@ -83,7 +81,7 @@ const LEFT_BULLETS = [
   "Increased complexity and coordination across teams",
 ];
 
-export default function Slide05WhatsComingRaisingTheBar() {
+export default function Slide06WhatsComingRaisingTheBar() {
   return (
     <div
       style={{
@@ -99,10 +97,10 @@ export default function Slide05WhatsComingRaisingTheBar() {
     >
       <div
         style={{
-          maxWidth: 1100,
+          maxWidth: 1400,
           width: "100%",
           margin: "0 auto",
-          padding: "64px clamp(32px, 5vw, 80px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
         }}
@@ -115,12 +113,11 @@ export default function Slide05WhatsComingRaisingTheBar() {
             alignItems: "start",
           }}
         >
-          {/* Left column */}
           <div>
             <p
               style={{
                 fontFamily: FONTS.mono,
-                fontSize: 13,
+                fontSize: 16,
                 fontWeight: 700,
                 color: COLORS.teal,
                 textTransform: "uppercase",
@@ -134,7 +131,7 @@ export default function Slide05WhatsComingRaisingTheBar() {
               style={{
                 fontFamily: FONTS.heading,
                 fontWeight: 800,
-                fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+                fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
                 lineHeight: 1.1,
                 letterSpacing: "-0.02em",
                 color: COLORS.charcoal,
@@ -157,7 +154,7 @@ export default function Slide05WhatsComingRaisingTheBar() {
               style={{
                 fontFamily: FONTS.heading,
                 fontWeight: 700,
-                fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
+                fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
                 color: COLORS.charcoal,
                 textTransform: "uppercase",
                 letterSpacing: "0.06em",
@@ -179,12 +176,12 @@ export default function Slide05WhatsComingRaisingTheBar() {
               {LEFT_BULLETS.map((text) => (
                 <li
                   key={text}
-                  style={{ display: "flex", alignItems: "flex-start", gap: 12 }}
+                  style={{ display: "flex", alignItems: "flex-start", gap: 14 }}
                 >
                   <span
                     style={{
-                      width: 8,
-                      height: 8,
+                      width: 10,
+                      height: 10,
                       borderRadius: "50%",
                       background: COLORS.teal,
                       marginTop: 8,
@@ -194,7 +191,7 @@ export default function Slide05WhatsComingRaisingTheBar() {
                   <span
                     style={{
                       fontFamily: FONTS.body,
-                      fontSize: "clamp(0.9rem, 1.25vw, 1.05rem)",
+                      fontSize: "clamp(1.1rem, 1.5vw, 1.4rem)",
                       lineHeight: 1.6,
                       color: "rgba(30,41,59,0.8)",
                     }}
@@ -206,8 +203,7 @@ export default function Slide05WhatsComingRaisingTheBar() {
             </ul>
           </div>
 
-          {/* Right column — cards */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <LightCard
               icon={Target}
               title="Higher Execution Standards"

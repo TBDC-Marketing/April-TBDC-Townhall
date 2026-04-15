@@ -22,7 +22,7 @@ const BULLETS = [
   "Look for ways to improve how we operate",
 ];
 
-export default function Slide04HowWeShowUp() {
+export default function Slide05HowWeShowUp() {
   return (
     <div
       style={{
@@ -35,7 +35,6 @@ export default function Slide04HowWeShowUp() {
         background: COLORS.navy,
       }}
     >
-      {/* Subtle glow */}
       <div
         style={{
           position: "absolute",
@@ -50,21 +49,20 @@ export default function Slide04HowWeShowUp() {
         }}
       />
 
-      {/* Main content */}
       <div
         style={{
           flex: 1,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "48px clamp(32px, 5vw, 80px) 0",
+          padding: "48px clamp(48px, 6vw, 96px) 0",
           position: "relative",
           zIndex: 10,
         }}
       >
         <div
           style={{
-            maxWidth: 1100,
+            maxWidth: 1400,
             width: "100%",
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -72,12 +70,11 @@ export default function Slide04HowWeShowUp() {
             alignItems: "center",
           }}
         >
-          {/* Left column */}
           <div>
             <p
               style={{
                 fontFamily: FONTS.mono,
-                fontSize: 13,
+                fontSize: 16,
                 fontWeight: 700,
                 color: COLORS.teal,
                 textTransform: "uppercase",
@@ -91,7 +88,7 @@ export default function Slide04HowWeShowUp() {
               style={{
                 fontFamily: FONTS.heading,
                 fontWeight: 800,
-                fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+                fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
                 lineHeight: 1.1,
                 letterSpacing: "-0.02em",
                 color: "#fff",
@@ -112,7 +109,7 @@ export default function Slide04HowWeShowUp() {
             <p
               style={{
                 fontFamily: FONTS.body,
-                fontSize: "clamp(1rem, 1.4vw, 1.15rem)",
+                fontSize: "clamp(1.2rem, 1.8vw, 1.6rem)",
                 lineHeight: 1.7,
                 color: "rgba(255,255,255,0.65)",
                 margin: 0,
@@ -123,7 +120,6 @@ export default function Slide04HowWeShowUp() {
             </p>
           </div>
 
-          {/* Right column — bullet list */}
           <ul
             style={{
               listStyle: "none",
@@ -131,18 +127,18 @@ export default function Slide04HowWeShowUp() {
               margin: 0,
               display: "flex",
               flexDirection: "column",
-              gap: 14,
+              gap: 16,
             }}
           >
             {BULLETS.map((text) => (
               <li
                 key={text}
-                style={{ display: "flex", alignItems: "flex-start", gap: 14 }}
+                style={{ display: "flex", alignItems: "flex-start", gap: 16 }}
               >
                 <span
                   style={{
-                    width: 8,
-                    height: 8,
+                    width: 10,
+                    height: 10,
                     borderRadius: "50%",
                     background: COLORS.teal,
                     marginTop: 8,
@@ -152,7 +148,7 @@ export default function Slide04HowWeShowUp() {
                 <span
                   style={{
                     fontFamily: FONTS.body,
-                    fontSize: "clamp(0.9rem, 1.25vw, 1.1rem)",
+                    fontSize: "clamp(1.1rem, 1.5vw, 1.4rem)",
                     lineHeight: 1.6,
                     color: "rgba(255,255,255,0.8)",
                   }}
@@ -165,27 +161,24 @@ export default function Slide04HowWeShowUp() {
         </div>
       </div>
 
-      {/* Bottom callout strip */}
       <div
         style={{
           position: "relative",
           zIndex: 10,
           background: "rgba(0,168,142,0.12)",
           borderTop: "1px solid rgba(0,168,142,0.25)",
-          padding: "20px clamp(32px, 5vw, 80px)",
+          padding: "20px clamp(48px, 6vw, 96px)",
           textAlign: "center",
         }}
       >
         <p
           style={{
             fontFamily: FONTS.body,
-            fontSize: "clamp(0.85rem, 1.15vw, 1rem)",
+            fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
             lineHeight: 1.6,
             color: "rgba(255,255,255,0.75)",
-            margin: 0,
-            maxWidth: 900,
-            marginLeft: "auto",
-            marginRight: "auto",
+            margin: "0 auto",
+            maxWidth: 1000,
           }}
         >
           <span style={{ color: COLORS.teal, fontWeight: 600 }}>

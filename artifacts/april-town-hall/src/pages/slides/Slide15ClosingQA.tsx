@@ -13,7 +13,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide12ClosingQA() {
+export default function Slide15ClosingQA() {
   return (
     <div
       style={{
@@ -27,7 +27,6 @@ export default function Slide12ClosingQA() {
         background: COLORS.warmWhite,
       }}
     >
-      {/* Radial gradient overlay */}
       <div
         style={{
           position: "absolute",
@@ -38,10 +37,10 @@ export default function Slide12ClosingQA() {
       />
       <div
         style={{
-          maxWidth: 800,
+          maxWidth: 1280,
           width: "100%",
           margin: "0 auto",
-          padding: "64px clamp(32px, 5vw, 80px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           textAlign: "center",
           position: "relative",
           zIndex: 10,
@@ -50,7 +49,7 @@ export default function Slide12ClosingQA() {
         <p
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 13,
+            fontSize: 16,
             fontWeight: 700,
             color: COLORS.teal,
             textTransform: "uppercase",
@@ -64,11 +63,11 @@ export default function Slide12ClosingQA() {
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: "clamp(2rem, 5vw, 3.75rem)",
+            fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
             lineHeight: 1.1,
             letterSpacing: "-0.02em",
             color: COLORS.charcoal,
-            margin: "0 0 16px 0",
+            margin: "0 0 20px 0",
           }}
         >
           Clarity. Ownership.{" "}
@@ -85,24 +84,24 @@ export default function Slide12ClosingQA() {
         <p
           style={{
             fontFamily: FONTS.body,
-            fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
+            fontSize: "clamp(1.2rem, 1.8vw, 1.6rem)",
             lineHeight: 1.7,
             color: "rgba(30,41,59,0.8)",
-            maxWidth: 640,
+            maxWidth: 760,
             margin: "0 auto",
           }}
         >
           We are building more structured, predictable ways of working together
           through continuous improvement across our systems.
         </p>
-        <div style={{ marginTop: 48 }}>
+        <div style={{ marginTop: 56 }}>
           <p
             style={{
               fontFamily: FONTS.serif,
               fontStyle: "italic",
-              fontSize: 28,
+              fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
               color: COLORS.teal,
-              marginTop: 32,
+              margin: 0,
             }}
           >
             Q&amp;A Open Floor

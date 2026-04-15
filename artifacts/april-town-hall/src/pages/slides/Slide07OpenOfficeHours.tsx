@@ -38,25 +38,25 @@ function DarkCard({
     >
       <div
         style={{
-          width: 40,
-          height: 40,
-          borderRadius: 10,
+          width: 56,
+          height: 56,
+          borderRadius: 12,
           background: "rgba(0,168,142,0.15)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: 12,
+          marginBottom: 14,
         }}
       >
-        <Icon size={20} color={COLORS.teal} />
+        <Icon size={28} color={COLORS.teal} />
       </div>
       <h3
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)",
+          fontSize: "clamp(1.15rem, 1.6vw, 1.5rem)",
           color: "#fff",
-          margin: "0 0 6px 0",
+          margin: "0 0 8px 0",
         }}
       >
         {title}
@@ -64,7 +64,7 @@ function DarkCard({
       <p
         style={{
           fontFamily: FONTS.body,
-          fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
+          fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
           lineHeight: 1.6,
           color: "rgba(255,255,255,0.6)",
           margin: 0,
@@ -76,7 +76,7 @@ function DarkCard({
   );
 }
 
-export default function Slide06OpenOfficeHours() {
+export default function Slide07OpenOfficeHours() {
   return (
     <div
       style={{
@@ -90,7 +90,6 @@ export default function Slide06OpenOfficeHours() {
         background: COLORS.navy,
       }}
     >
-      {/* Glow */}
       <div
         style={{
           position: "absolute",
@@ -108,20 +107,19 @@ export default function Slide06OpenOfficeHours() {
 
       <div
         style={{
-          maxWidth: 800,
+          maxWidth: 1100,
           width: "100%",
           margin: "0 auto",
-          padding: "56px clamp(24px, 4vw, 64px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
           textAlign: "center",
         }}
       >
-        {/* Eyebrow */}
         <p
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 13,
+            fontSize: 16,
             fontWeight: 700,
             color: COLORS.teal,
             textTransform: "uppercase",
@@ -132,12 +130,11 @@ export default function Slide06OpenOfficeHours() {
           Community
         </p>
 
-        {/* Title */}
         <h1
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: "clamp(1.75rem, 4vw, 3rem)",
+            fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
             lineHeight: 1.1,
             letterSpacing: "-0.02em",
             color: "#fff",
@@ -156,25 +153,23 @@ export default function Slide06OpenOfficeHours() {
           </span>
         </h1>
 
-        {/* Schedule */}
         <p
           style={{
             fontFamily: FONTS.body,
-            fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
+            fontSize: "clamp(1.2rem, 1.8vw, 1.6rem)",
             color: "rgba(255,255,255,0.55)",
-            margin: "0 0 32px 0",
+            margin: "0 0 36px 0",
             letterSpacing: "0.01em",
           }}
         >
           Wednesdays, 11:00 – 12:15 · Open to everyone
         </p>
 
-        {/* 2×2 grid */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 16,
+            gap: 20,
             textAlign: "left",
             marginBottom: 28,
           }}
@@ -201,11 +196,10 @@ export default function Slide06OpenOfficeHours() {
           />
         </div>
 
-        {/* Bottom note */}
         <p
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 12,
+            fontSize: 14,
             fontWeight: 700,
             color: COLORS.teal,
             letterSpacing: "0.08em",

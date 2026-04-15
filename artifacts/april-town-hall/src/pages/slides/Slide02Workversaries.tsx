@@ -3,6 +3,7 @@ import nikhilImg from "@assets/Nikhil_1776184061595.png";
 import gurpreetImg from "@assets/Gurpreet_1776184061593.png";
 import davinderImg from "@assets/Davinder_1776184061591.png";
 import farazImg from "@assets/Faraz_1776184061592.png";
+import ciaImg from "@assets/Cia_1776263792476.png";
 
 const COLORS = {
   navy: "#0A1628",
@@ -33,21 +34,21 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 16,
-        padding: "24px 20px",
+        gap: 14,
+        padding: "24px 16px",
         background: "#fff",
         borderRadius: 20,
         border: "1px solid rgba(203,213,225,0.4)",
         boxShadow: "0 2px 16px rgba(10,22,40,0.06)",
-        minWidth: 160,
         flex: 1,
+        minWidth: 0,
       }}
     >
       {/* Avatar — circular photo; falls back to initials if imageSrc is not provided */}
       <div
         style={{
-          width: 96,
-          height: 96,
+          width: 100,
+          height: 100,
           borderRadius: "50%",
           overflow: "hidden",
           border: `3px solid ${COLORS.teal}`,
@@ -69,7 +70,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
             style={{
               fontFamily: FONTS.heading,
               fontWeight: 800,
-              fontSize: 28,
+              fontSize: 30,
               color: "#fff",
               letterSpacing: "-0.02em",
             }}
@@ -85,10 +86,10 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: "clamp(2rem, 4vw, 3rem)",
+            fontSize: 72,
             lineHeight: 1,
             color: COLORS.teal,
-            letterSpacing: "-0.03em",
+            letterSpacing: "-0.04em",
           }}
         >
           {years}
@@ -96,7 +97,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
         <div
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 11,
+            fontSize: 15,
             fontWeight: 700,
             color: "rgba(30,41,59,0.5)",
             textTransform: "uppercase",
@@ -113,7 +114,7 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
+          fontSize: 20,
           color: COLORS.charcoal,
           textAlign: "center",
           lineHeight: 1.3,
@@ -128,14 +129,15 @@ function MemberCard({ name, years, initials, imageSrc }: MemberCardProps) {
 const MEMBERS: MemberCardProps[] = [
   { name: "Jonathan Knott", years: 5, initials: "JK", imageSrc: jonathanImg },
   { name: "Nikhil Sharma",  years: 4, initials: "NS", imageSrc: nikhilImg   },
+  { name: "Cia Prior",      years: 4, initials: "CP", imageSrc: ciaImg      },
   { name: "Gurpreet Kaur",  years: 1, initials: "GK", imageSrc: gurpreetImg },
   { name: "Davinder Gurm",  years: 1, initials: "DG", imageSrc: davinderImg },
   { name: "Faraz Eslami",   years: 1, initials: "FE", imageSrc: farazImg    },
 ];
 
 export default function Slide02Workversaries() {
-  const topRow = MEMBERS.slice(0, 3);
-  const bottomRow = MEMBERS.slice(3);
+  const row1 = MEMBERS.slice(0, 3);
+  const row2 = MEMBERS.slice(3);
 
   return (
     <div
@@ -151,7 +153,6 @@ export default function Slide02Workversaries() {
         background: COLORS.warmWhite,
       }}
     >
-      {/* Subtle radial tint */}
       <div
         style={{
           position: "absolute",
@@ -164,40 +165,38 @@ export default function Slide02Workversaries() {
 
       <div
         style={{
-          maxWidth: 1000,
+          maxWidth: 1280,
           width: "100%",
           margin: "0 auto",
-          padding: "40px clamp(24px, 4vw, 64px)",
+          padding: "32px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
           textAlign: "center",
         }}
       >
-        {/* Eyebrow */}
         <p
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 13,
+            fontSize: 16,
             fontWeight: 700,
             color: COLORS.teal,
             textTransform: "uppercase",
             letterSpacing: "0.12em",
-            margin: "0 0 16px 0",
+            margin: "0 0 12px 0",
           }}
         >
           March &amp; April
         </p>
 
-        {/* Title */}
         <h1
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: "clamp(1.75rem, 4vw, 3.25rem)",
+            fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
             lineHeight: 1.1,
             letterSpacing: "-0.02em",
             color: COLORS.charcoal,
-            margin: "0 0 36px 0",
+            margin: "0 0 28px 0",
           }}
         >
           Happy{" "}
@@ -212,31 +211,29 @@ export default function Slide02Workversaries() {
           </span>
         </h1>
 
-        {/* Top row — 3 cards */}
+        {/* Row 1 — 3 cards */}
         <div
           style={{
-            display: "flex",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 20,
-            justifyContent: "center",
             marginBottom: 20,
           }}
         >
-          {topRow.map((m) => (
+          {row1.map((m) => (
             <MemberCard key={m.name} {...m} />
           ))}
         </div>
 
-        {/* Bottom row — 2 cards centred */}
+        {/* Row 2 — 3 cards */}
         <div
           style={{
-            display: "flex",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 20,
-            justifyContent: "center",
-            maxWidth: 480,
-            margin: "0 auto",
           }}
         >
-          {bottomRow.map((m) => (
+          {row2.map((m) => (
             <MemberCard key={m.name} {...m} />
           ))}
         </div>

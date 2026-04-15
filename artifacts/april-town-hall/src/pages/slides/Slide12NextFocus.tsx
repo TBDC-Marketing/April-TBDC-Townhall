@@ -33,29 +33,27 @@ function LightCard({
         padding: "28px 24px",
         border: "1px solid rgba(203,213,225,0.5)",
         borderLeft: `3px solid ${COLORS.teal}`,
-        position: "relative",
-        overflow: "hidden",
       }}
     >
       <div
         style={{
-          width: 44,
-          height: 44,
+          width: 56,
+          height: 56,
           borderRadius: 12,
           background: "rgba(0,168,142,0.1)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: 16,
+          marginBottom: 14,
         }}
       >
-        <Icon size={22} color={COLORS.teal} />
+        <Icon size={28} color={COLORS.teal} />
       </div>
       <h3
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)",
+          fontSize: "clamp(1.15rem, 1.6vw, 1.5rem)",
           color: COLORS.charcoal,
           margin: "0 0 8px 0",
         }}
@@ -65,7 +63,7 @@ function LightCard({
       <p
         style={{
           fontFamily: FONTS.body,
-          fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
+          fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
           lineHeight: 1.6,
           color: "rgba(30,41,59,0.7)",
           margin: 0,
@@ -77,7 +75,7 @@ function LightCard({
   );
 }
 
-export default function Slide10NextFocus() {
+export default function Slide12NextFocus() {
   return (
     <div
       style={{
@@ -91,7 +89,6 @@ export default function Slide10NextFocus() {
         background: COLORS.warmWhite,
       }}
     >
-      {/* Subtle tint */}
       <div
         style={{
           position: "absolute",
@@ -104,20 +101,19 @@ export default function Slide10NextFocus() {
 
       <div
         style={{
-          maxWidth: 1000,
+          maxWidth: 1280,
           width: "100%",
           margin: "0 auto",
-          padding: "56px clamp(24px, 4vw, 64px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
           textAlign: "center",
         }}
       >
-        {/* Eyebrow */}
         <p
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 13,
+            fontSize: 16,
             fontWeight: 700,
             color: COLORS.teal,
             textTransform: "uppercase",
@@ -128,16 +124,15 @@ export default function Slide10NextFocus() {
           What We're Building Toward
         </p>
 
-        {/* Title */}
         <h1
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: "clamp(1.75rem, 4vw, 3rem)",
+            fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
             lineHeight: 1.1,
             letterSpacing: "-0.02em",
             color: COLORS.charcoal,
-            margin: "0 0 40px 0",
+            margin: "0 0 44px 0",
           }}
         >
           Next 60–90 Day{" "}
@@ -152,12 +147,11 @@ export default function Slide10NextFocus() {
           </span>
         </h1>
 
-        {/* 2×2 grid */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 20,
+            gap: 24,
             textAlign: "left",
           }}
         >

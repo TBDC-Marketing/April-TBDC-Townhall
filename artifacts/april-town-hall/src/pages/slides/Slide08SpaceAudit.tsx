@@ -16,7 +16,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-function DarkCard({
+function LightCard({
   icon: Icon,
   title,
   description,
@@ -28,35 +28,34 @@ function DarkCard({
   return (
     <div
       style={{
-        background: "rgba(255,255,255,0.05)",
-        backdropFilter: "blur(8px)",
-        border: "1px solid rgba(255,255,255,0.1)",
-        borderLeft: `3px solid ${COLORS.teal}`,
+        background: "#fff",
         borderRadius: 16,
-        padding: "28px 24px",
+        padding: "32px 28px",
+        border: "1px solid rgba(203,213,225,0.5)",
+        borderLeft: `3px solid ${COLORS.teal}`,
       }}
     >
       <div
         style={{
-          width: 44,
-          height: 44,
+          width: 56,
+          height: 56,
           borderRadius: 12,
-          background: "rgba(0,168,142,0.15)",
+          background: "rgba(0,168,142,0.1)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           marginBottom: 16,
         }}
       >
-        <Icon size={22} color={COLORS.teal} />
+        <Icon size={28} color={COLORS.teal} />
       </div>
       <h3
         style={{
           fontFamily: FONTS.heading,
           fontWeight: 700,
-          fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
-          color: "#fff",
-          margin: "0 0 8px 0",
+          fontSize: "clamp(1.15rem, 1.6vw, 1.5rem)",
+          color: COLORS.charcoal,
+          margin: "0 0 10px 0",
         }}
       >
         {title}
@@ -64,9 +63,9 @@ function DarkCard({
       <p
         style={{
           fontFamily: FONTS.body,
-          fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+          fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
           lineHeight: 1.6,
-          color: "rgba(255,255,255,0.6)",
+          color: "rgba(30,41,59,0.7)",
           margin: 0,
         }}
       >
@@ -76,7 +75,7 @@ function DarkCard({
   );
 }
 
-export default function Slide07SpaceAudit() {
+export default function Slide08SpaceAudit() {
   return (
     <div
       style={{
@@ -87,39 +86,33 @@ export default function Slide07SpaceAudit() {
         justifyContent: "center",
         overflow: "hidden",
         position: "relative",
-        background: COLORS.navy,
+        background: COLORS.warmWhite,
       }}
     >
-      {/* Blur circle */}
       <div
         style={{
           position: "absolute",
-          top: "60%",
-          left: "30%",
-          transform: "translate(-50%, -50%)",
-          width: 600,
-          height: 600,
-          borderRadius: "50%",
-          background: "rgba(0,168,142,0.03)",
-          filter: "blur(80px)",
+          inset: 0,
+          opacity: 0.04,
+          background: `radial-gradient(ellipse at 60% 40%, ${COLORS.teal}, transparent 70%)`,
           pointerEvents: "none",
         }}
       />
       <div
         style={{
-          maxWidth: 1100,
+          maxWidth: 1400,
           width: "100%",
           margin: "0 auto",
-          padding: "64px clamp(32px, 5vw, 80px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
         }}
       >
-        <div style={{ textAlign: "center", marginBottom: 48 }}>
+        <div style={{ textAlign: "center", marginBottom: 56 }}>
           <p
             style={{
               fontFamily: FONTS.mono,
-              fontSize: 13,
+              fontSize: 16,
               fontWeight: 700,
               color: COLORS.teal,
               textTransform: "uppercase",
@@ -133,11 +126,11 @@ export default function Slide07SpaceAudit() {
             style={{
               fontFamily: FONTS.heading,
               fontWeight: 800,
-              fontSize: "clamp(2rem, 5vw, 3.75rem)",
+              fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
-              color: "#fff",
-              margin: "0 0 16px 0",
+              color: COLORS.charcoal,
+              margin: "0 0 20px 0",
             }}
           >
             Space Audit &amp;{" "}
@@ -154,10 +147,10 @@ export default function Slide07SpaceAudit() {
           <p
             style={{
               fontFamily: FONTS.body,
-              fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
+              fontSize: "clamp(1.2rem, 1.8vw, 1.6rem)",
               lineHeight: 1.7,
-              color: "rgba(255,255,255,0.7)",
-              maxWidth: 640,
+              color: "rgba(30,41,59,0.8)",
+              maxWidth: 760,
               margin: "0 auto",
             }}
           >
@@ -170,17 +163,17 @@ export default function Slide07SpaceAudit() {
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 24,
-            maxWidth: 800,
+            gap: 28,
+            maxWidth: 960,
             margin: "0 auto",
           }}
         >
-          <DarkCard
+          <LightCard
             icon={MapPin}
             title="Tenant Transitions"
             description="Some tenants may be thoughtfully transitioned out if they are not actively utilizing the space."
           />
-          <DarkCard
+          <LightCard
             icon={Users}
             title="New Additions"
             description="New companies will be brought into the physical space where there is community demand."

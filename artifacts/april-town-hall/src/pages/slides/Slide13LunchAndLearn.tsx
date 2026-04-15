@@ -15,7 +15,7 @@ const FONTS = {
   mono: "'JetBrains Mono', monospace",
 };
 
-export default function Slide11LunchAndLearn() {
+export default function Slide13LunchAndLearn() {
   return (
     <div
       style={{
@@ -29,7 +29,6 @@ export default function Slide11LunchAndLearn() {
         background: COLORS.navy,
       }}
     >
-      {/* Blur circle */}
       <div
         style={{
           position: "absolute",
@@ -46,10 +45,10 @@ export default function Slide11LunchAndLearn() {
       />
       <div
         style={{
-          maxWidth: 800,
+          maxWidth: 1100,
           width: "100%",
           margin: "0 auto",
-          padding: "64px clamp(32px, 5vw, 80px)",
+          padding: "48px clamp(48px, 6vw, 96px)",
           position: "relative",
           zIndex: 10,
           textAlign: "center",
@@ -58,7 +57,7 @@ export default function Slide11LunchAndLearn() {
         <p
           style={{
             fontFamily: FONTS.mono,
-            fontSize: 13,
+            fontSize: 16,
             fontWeight: 700,
             color: COLORS.teal,
             textTransform: "uppercase",
@@ -72,11 +71,11 @@ export default function Slide11LunchAndLearn() {
           style={{
             fontFamily: FONTS.heading,
             fontWeight: 800,
-            fontSize: "clamp(2rem, 5vw, 3.75rem)",
+            fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
             lineHeight: 1.1,
             letterSpacing: "-0.02em",
             color: "#fff",
-            margin: "0 0 16px 0",
+            margin: "0 0 20px 0",
           }}
         >
           Lunch &amp;{" "}
@@ -93,9 +92,9 @@ export default function Slide11LunchAndLearn() {
         <p
           style={{
             fontFamily: FONTS.body,
-            fontSize: "clamp(1rem, 1.3vw, 1.15rem)",
+            fontSize: "clamp(1.2rem, 1.8vw, 1.6rem)",
             color: "rgba(255,255,255,0.7)",
-            maxWidth: 560,
+            maxWidth: 680,
             margin: "0 auto",
             lineHeight: 1.6,
           }}
@@ -103,7 +102,7 @@ export default function Slide11LunchAndLearn() {
           We want to create more shared learning across the team. Our initial
           session will focus on AI and automation tools being used in workflows.
         </p>
-        <div style={{ marginTop: 32, textAlign: "left" }}>
+        <div style={{ marginTop: 36, textAlign: "left", maxWidth: 760, margin: "36px auto 0" }}>
           <div
             style={{
               background: "rgba(255,255,255,0.05)",
@@ -111,13 +110,13 @@ export default function Slide11LunchAndLearn() {
               border: "1px solid rgba(255,255,255,0.1)",
               borderLeft: `3px solid ${COLORS.teal}`,
               borderRadius: 16,
-              padding: "28px 24px",
+              padding: "32px 28px",
             }}
           >
             <div
               style={{
-                width: 44,
-                height: 44,
+                width: 56,
+                height: 56,
                 borderRadius: 12,
                 background: "rgba(0,168,142,0.15)",
                 display: "flex",
@@ -126,15 +125,15 @@ export default function Slide11LunchAndLearn() {
                 marginBottom: 16,
               }}
             >
-              <Lightbulb size={22} color={COLORS.teal} />
+              <Lightbulb size={28} color={COLORS.teal} />
             </div>
             <h3
               style={{
                 fontFamily: FONTS.heading,
                 fontWeight: 700,
-                fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
+                fontSize: "clamp(1.15rem, 1.6vw, 1.5rem)",
                 color: "#fff",
-                margin: "0 0 8px 0",
+                margin: "0 0 10px 0",
               }}
             >
               Open Call for Participation
@@ -142,7 +141,7 @@ export default function Slide11LunchAndLearn() {
             <p
               style={{
                 fontFamily: FONTS.body,
-                fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                fontSize: "clamp(1rem, 1.3vw, 1.25rem)",
                 lineHeight: 1.6,
                 color: "rgba(255,255,255,0.6)",
                 margin: 0,
