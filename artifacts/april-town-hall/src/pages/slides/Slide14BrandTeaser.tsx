@@ -108,12 +108,30 @@ export default function Slide14BrandTeaser() {
         <div
           style={{
             display: "inline-block",
-            border: "1px solid rgba(0,168,142,0.4)",
+            position: "relative",
             padding: "48px 100px",
-            background: "rgba(0,168,142,0.04)",
-            transform: "skewX(-8deg)",
           }}
         >
+          <svg
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              pointerEvents: "none",
+            }}
+            viewBox="0 0 500 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M 30,0 L 470,0 C 500,0 500,10 498,60 C 496,110 495,120 465,120 L 0,120 Z"
+              fill="rgba(0,168,142,0.04)"
+              stroke="rgba(0,168,142,0.4)"
+              strokeWidth="1.5"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
           <p
             style={{
               fontFamily: FONTS.serif,
@@ -122,7 +140,8 @@ export default function Slide14BrandTeaser() {
               color: "rgba(255,255,255,0.35)",
               margin: 0,
               letterSpacing: "0.02em",
-              transform: "skewX(8deg)",
+              position: "relative",
+              zIndex: 1,
             }}
           >
             Brand Reveal Coming Soon!
