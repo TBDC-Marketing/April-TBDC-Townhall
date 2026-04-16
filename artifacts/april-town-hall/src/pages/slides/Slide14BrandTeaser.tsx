@@ -140,7 +140,7 @@ export default function Slide14BrandTeaser() {
             style={{
               fontFamily: FONTS.serif,
               fontStyle: "italic",
-              fontSize: "clamp(1.6rem, 3vw, 2.8rem)",
+              fontSize: "clamp(1.2rem, 2.2vw, 2.2rem)",
               color: "rgba(255,255,255,0.35)",
               margin: 0,
               letterSpacing: "0.02em",
