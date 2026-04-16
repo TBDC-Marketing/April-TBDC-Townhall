@@ -120,15 +120,18 @@ export default function Slide14BrandTeaser() {
               width: "100%",
               height: "100%",
               pointerEvents: "none",
+              overflow: "visible",
             }}
-            viewBox="0 0 500 120"
+            viewBox="68 338 1714 403"
             preserveAspectRatio="none"
           >
             <path
-              d="M 30,0 L 470,0 C 500,0 500,10 498,60 C 496,110 495,120 465,120 L 0,120 Z"
+              d="M 78 731 L 408 348 H 1772 L 1551 605 A 361 361 0 0 1 1277 731 H 78 Z"
               fill="rgba(0,168,142,0.04)"
               stroke="rgba(0,168,142,0.4)"
-              strokeWidth="1.5"
+              strokeWidth="2"
+              strokeLinejoin="miter"
+              strokeLinecap="butt"
               vectorEffect="non-scaling-stroke"
             />
           </svg>
