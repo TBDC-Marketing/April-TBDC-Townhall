@@ -122,11 +122,12 @@ export default function Slide14BrandTeaser() {
               pointerEvents: "none",
               overflow: "visible",
             }}
-            viewBox="68 338 1714 403"
+            viewBox="38 338 1774 403"
             preserveAspectRatio="none"
           >
             <path
-              d="M 78 731 L 408 348 H 1772 L 1551 605 A 361 361 0 0 1 1277 731 H 78 Z"
+              d="M 48 731 L 378 348 H 1802 L 1581 605 A 361 361 0 0 1 1307 731 H 48 Z"
+              shapeRendering="geometricPrecision"
               fill="rgba(0,168,142,0.04)"
               stroke="rgba(0,168,142,0.4)"
               strokeWidth="2"
