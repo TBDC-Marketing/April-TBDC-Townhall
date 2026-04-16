@@ -109,9 +109,9 @@ export default function Slide14BrandTeaser() {
           style={{
             display: "inline-block",
             border: "1px solid rgba(0,168,142,0.4)",
-            borderRadius: 16,
-            padding: "48px 80px",
+            padding: "48px 100px",
             background: "rgba(0,168,142,0.04)",
+            transform: "skewX(-8deg)",
           }}
         >
           <p
@@ -122,9 +122,10 @@ export default function Slide14BrandTeaser() {
               color: "rgba(255,255,255,0.35)",
               margin: 0,
               letterSpacing: "0.02em",
+              transform: "skewX(8deg)",
             }}
           >
-            Brand reveal coming soon
+            Brand Reveal Coming Soon!
           </p>
         </div>
       </div>

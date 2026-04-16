@@ -14,7 +14,7 @@ const FONTS = {
 };
 
 const BULLETS = [
-  "Take ownership beyond your lane",
+  "Take Ownership",
   "Bring solutions, not just problems",
   "Think ahead, not just what's in front of you",
   "Be proactive, not reactive",
